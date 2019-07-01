@@ -156,8 +156,7 @@ nav a {
 }
 
 #hero #hero-image img {
-    position: relative;
-    object-fit: cover;
+    transform: scale3d(1.75, 1.75, 1.75);
     width: 100%;
     height: 100%;
 }
@@ -396,6 +395,8 @@ div.min-height650 {
 }
 #image-things {
     width: 60px;
+    position: relative;
+    bottom: 10px;
 }
 /* End Additional Content */
 
@@ -490,7 +491,15 @@ ul {
     #logo {
         padding: 0px;
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
+    
+    #logo > a {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
     .padd-right {
         padding: 0px;
     }
@@ -502,6 +511,10 @@ ul {
 
     nav ul {
         justify-content: center;
+    }
+
+    #items > ol > li {
+        font-size: 10px;
     }
 
     #link-one-drop-down {
@@ -580,9 +593,13 @@ ul {
     }
 
     #logo {
-        padding: 0px;
+        padding: 12px 20px;
+        font-size: 10px;
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
+
     .padd-right {
         padding: 0px;
     }
@@ -598,6 +615,15 @@ ul {
 
     #link-one-drop-down {
         top: 80px;
+    }
+
+    #items {
+        padding-right: 0em;
+        font-size: 10px;
+    }
+
+    #items ol > li {
+        font-size: 10px;
     }
 
     .container-etheral {
