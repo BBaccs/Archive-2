@@ -17,7 +17,7 @@
     <!--  Navagation Bar -->
     <nav>
         <div class="container">
-            <div id="logo">
+            <div id="logo" class="wrapper">
                 <a href="#">Example Page</a>
             </div>
             <div id="items">
@@ -44,7 +44,7 @@
 
 
     <!-- Heading -->
-    <header id="hero">
+    <header id="hero" class="wrapper">
         <h1>Welcome to my example page</h1>
         <h2>This is our new assessment</h2>
         <div id="hero-image">
@@ -56,70 +56,76 @@
 
     <!-- Main Content -->  
     <main> 
-        <section class="wrapper main-wrapper">
-            <div class="blue-border">
-                    <div class="wrapper container-etheral">
-                        <div class="container-etheral-content">
-                        <h4>These are cards</h4>
-                        <p>These cards are cool & tell you things about animals! Did you know a bird can run up to 65mph? And a cat can jump 26 feet 
-                            in the air to catch prey? Animals are so cool.</p>
-                        <p>
-                            <a class="link-underline" href="http://mentalfloss.com/article/86578/50-incredible-animal-facts-youll-want-share">Check out more animal facts</a> 
-                            There are so many facts to learn.
-                        </p>
+        <section class="primary-wrapper">
+                <div class="wrapper container-etheral">
+                    <div class="container-etheral-content">
+                    <h4>These are cards</h4>
+                    <p>These cards are cool & tell you things about animals! Did you know a bird can run up to 65mph? And a cat can jump 26 feet 
+                        in the air to catch prey? Animals are so cool.</p>
+                    <p>
+                        <a class="link-underline" href="http://mentalfloss.com/article/86578/50-incredible-animal-facts-youll-want-share">Check out more animal facts</a> 
+                        There are so many facts to learn.
+                    </p>
+                </div>
+                <div class="container-input">
+                    <p>I want to see:</p>
+                    <input type="checkbox" id="birds" name="birds">
+                    <label for="birds">Birds</label>
+                    <input type="checkbox" id="cats" name="cats">
+                    <label for="cats">Cats</label>
+                </div>
+                <div class="container-cards">
+                    <!-- Card 1: -->
+                    <div class="card">
+                        <div class="wrapper-card-img">
+                            <img class="cat-image" src="Resources/images-for-example-page/cat.png" alt="cat">
+                        </div>
+                        <div class="card-info">
+                            <h5>This is card 1</h5>
+                            <p>Cats use their whiskers to determine space between objects in the dark.</p>
+                            <p>
+                                <a href="#">Click & go!</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="container-input">
-                        <p>I want to see:</p>
-                        <input type="checkbox" id="birds" name="birds">
-                        <label for="birds">Birds</label>
-                        <input type="checkbox" id="cats" name="cats">
-                        <label for="cats">Cats</label>
+                    <!-- Card 2: -->
+                    <div class="card">
+                        <div class="wrapper-card-img">
+                            <img src="Resources/images-for-example-page/birds.png" alt="cat">
+                        </div>
+                        <div class="card-info">
+                            <h5>This is card 2</h5>
+                            <p>Some birds have membranes that cover their eyes like goggles, enabling them to see 
+                                while traveling at high speeds.</p>
+                            <p>
+                                <a href="#">Click & go!</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-container">
-                        <!-- Card 1: -->
-                        <div class="card card-cat">
-                            <div class="card-img cat"></div>
-                            <div class="card-info">
-                                <h5>This is card 1</h5>
-                                <p>Cats use their whiskers to determine space between objects in the dark.</p>
-                                <p>
-                                    <a href="#">Click & go!</a>
-                                </p>
-                            </div>
+                    <!-- Card 3: -->
+                    <div class="card">
+                        <div class="wrapper-card-img">
+                            <img class="cat-image" src="Resources/images-for-example-page/cat.png" alt="cat">
                         </div>
-                        <!-- Card 2: -->
-                        <div class="card card-bird">
-                            <div class="card-img bird"></div>
-                            <div class="card-info">
-                                <h5>This is card 2</h5>
-                                <p>Some birds have membranes that cover their eyes like goggles, enabling them to see 
-                                    while traveling at high speeds.</p>
-                                <p>
-                                    <a href="#">Click & go!</a>
-                                </p>
-                            </div>
+                        <div class="card-info">
+                            <h5>This is card 3</h5>
+                            <p>The cheetah is the only cat that can't retract its claws.</p>
+                            <p>
+                                <a href="#">Click & go!</a>
+                            </p>
                         </div>
-                        <!-- Card 3: -->
-                        <div class="card card-cat">
-                            <div class="card-img cat"></div>
-                            <div class="card-info">
-                                <h5>This is card 3</h5>
-                                <p>The cheetah is the only cat that can't retract its claws.</p>
-                                <p>
-                                    <a href="#">Click & go!</a>
-                                </p>
-                            </div>
+                    </div>
+                    <!-- Card 4: -->
+                    <div class="card card-bird">
+                        <div class="wrapper-card-img">
+                            <img src="Resources/images-for-example-page/birds.png" alt="cat">
                         </div>
-                        <!-- Card 4: -->
-                        <div class="card card-bird">
-                            <div class="card-img bird"></div>
-                            <div class="card-info">
-                                <h5>This is card 4</h5>
-                                <p>Peregrine falcons can fly up to and sometimes surpassing 200mph as they hunt prey.</p>
-                                <p>
-                                    <a href="#">Click & go!</a>
-                                </p>
-                            </div>
+                        <div class="card-info">
+                            <h5>This is card 4</h5>
+                            <p>Peregrine falcons can fly up to and sometimes surpassing 200mph as they hunt prey.</p>
+                            <p>
+                                <a href="#">Click & go!</a>
+                            </p>
                         </div>
                     </div>
                 </div>
