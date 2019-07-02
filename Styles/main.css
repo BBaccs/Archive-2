@@ -16,6 +16,7 @@
 }
 /* End Variables */
 
+
 /* Globals */
 * {
     text-decoration: none; 
@@ -34,6 +35,7 @@ p, label, li {
     font-size: 12px;
 }
 /* End Globals */
+
 
 /* Header */
 nav {
@@ -442,7 +444,6 @@ ul {
 
 
 /* MEDIA QUERIES */
-
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     div.container-etheral-content {
@@ -550,8 +551,11 @@ ul {
     }
 
     .container-cards {
-        min-height: 1300px;
         flex-wrap: wrap;
+    }
+
+    .card {
+        margin-bottom: 10px;
     }
 
     .container-input {
@@ -583,6 +587,7 @@ ul {
     }
 }
 /* END Phone breakpoint */
+
 
 /* XS Phone breakpoint */
 @media (max-width: 321px)  {
@@ -662,6 +667,7 @@ ul {
 
     div.card {
         margin-right: 0em;
+        margin-bottom: 10px;
     }
 
     .container-input {
@@ -690,24 +696,3 @@ ul {
 }
 /* END XS Phone breakpoint */
 /* END MEDIA QUERIES */
-
-/* Optional Javascript toggle class */
-.darkBarkgroundColor {
-    background-color: #005878;
-}
-
-.hide-element {
-    /* Javascript class */
-    display: none;
-}
-
-div.min-height450 {
-    /* Javascript class */
-    min-height: 450px;
-}
-
-div.min-height650 {
-    /* Javascript class */
-    min-height: 650px;
-}
-/* End Javascript toggle class */

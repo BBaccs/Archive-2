@@ -4,7 +4,6 @@ const catsCheckbox = document.getElementById('cats');
 const cardCat = document.querySelectorAll('.card-cat');
 const cardBird = document.querySelectorAll('.card-bird');
 const extendableLink = document.querySelector('.extendable-link');
-const linkOneDropDownMenu = document.querySelector('#link-one-drop-down');
 const cardContainer = document.querySelector('.card-container');
 
 // Define functions
@@ -12,48 +11,48 @@ const cardContainer = document.querySelector('.card-container');
 function showSelectedCards(e) {
  
     // If both are checked, remove show all cards and uncheck both boxes
-    if (birdsCheckbox.checked === true && catsCheckbox.checked === true) {
+    if (birdsCheckbox.checked && catsCheckbox.checked) {
         // Uncheck boxes
         birdsCheckbox.checked = false;
         catsCheckbox.checked = false;
         // Loop through cards and remove hideElement class
         for (let i = 0; i < cardBird.length; i++) {
-            cardBird[i].classList.remove('hide-element');   
+            cardBird[i].classList.remove('is-hidden');   
         }
         for (let i = 0; i < cardCat.length; i++) {
-            cardCat[i].classList.remove('hide-element');   
+            cardCat[i].classList.remove('is-hidden');   
         }
     }  
     // Check to see if the Birds checkbox is checked, if so, hide the cat cards
     else if (e.target.id === 'birds') {
         // Loop through selected card and toggle the hideElement css class
          for (let i = 0; i < cardBird.length; i++) {
-            cardCat[i].classList.toggle('hide-element');   
+            cardCat[i].classList.toggle('is-hidden');   
         }
     } 
     // Otherwise the cats checkbox is checked, so hide the bird cards
     else {
         for (let i = 0; i < cardCat.length; i++) {
-            cardBird[i].classList.toggle('hide-element');   
+            cardBird[i].classList.toggle('is-hidden');   
         }
     }  
 
     // If the screen is iPad size or smaller, reduce height of the now container, since it now contains less cards
-    if(window.screen.availWidth < 769) {
-        // If the screen is phone size, we need the container slightly bigger
-        if (window.screen.availWidth < 400) {
-            cardContainer.classList.toggle('min-height650');
-        } else {
-            cardContainer.classList.toggle('min-height450');
-        }
-    }
+    // if(window.screen.availWidth < 769) {
+    //     // If the screen is phone size, we need the container slightly bigger
+    //     if (window.screen.availWidth < 400) {
+    //         cardContainer.classList.toggle('min-height650');
+    //     } else {
+    //         cardContainer.classList.toggle('min-height450');
+    //     }
+    // }
 }
 
 
 // Toggles a dropdown menu with links, takes the link containing the dropdown link as a parameter
 function dropDownMenu(linkName) {
-    linkName.classList.toggle('hide-element');
-    linkName.classList.toggle('darkBarkgroundColor');
+    linkName.classList.toggle('is-hidden');
+    // linkName.classList.toggle('darkBarkgroundColor');
 }
 
 // Create event listeners
