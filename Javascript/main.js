@@ -3,6 +3,7 @@ const birdsCheckbox = document.getElementById('birds');
 const catsCheckbox = document.getElementById('cats');
 const cardCat = document.querySelectorAll('.card-cat');
 const cardBird = document.querySelectorAll('.card-bird');
+const containerCards = document.querySelector('.container-cards');
 
 // Define functions
 // Toggle hide cards
@@ -25,7 +26,7 @@ function showSelectedCards(event) {
     else if (event.target.id === 'birds') {
         // Loop through selected card and toggle the hideElement css class
          for (let i = 0; i < cardBird.length; i++) {
-            cardCat[i].classList.toggle('is-hidden');   
+            cardCat[i].classList.toggle('is-hidden');
         }
     } 
     // Otherwise the cats checkbox is checked, so hide the bird cards
@@ -34,6 +35,14 @@ function showSelectedCards(event) {
             cardBird[i].classList.toggle('is-hidden');   
         }
     }  
+
+    // If the screen is iPad size adjust the remaining cards via grid
+    if(window.screen.availWidth > 767 && window.screen.availWidth < 1025) {
+            containerCards.classList.toggle('handle-remaining-cards');
+    } // Else the screen is desktop of phone, adjust teh remaing cards via flexbox
+    else {
+            containerCards.classList.toggle('center-remaining-cards');
+        }
 }
 
 // Create event listeners

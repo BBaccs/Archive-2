@@ -121,29 +121,6 @@ nav > div.container {
 }
 
 .is-hidden {display: none;}
-/*
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav li {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-nav a {
-    color: white;
-    padding: 16px 8px 16px 8px;
-}
-
-#link-one-drop-down {
-    background-color: #147693;
-    margin: 0em;
-    padding: 0em;
-}
-*/
 
 #hero {
     position: relative;
@@ -312,6 +289,18 @@ div.card > *, a {
 .card-info > h5 {
     color: var(--secondary-heading-color);
 }
+
+/* Javascript only */
+.center-remaining-cards {
+    justify-content: center;
+}
+
+.handle-remaining-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-gap: 50px;
+}
+/* Javascript only */
 
 .wrapper-card-img {
     height: 50%;
