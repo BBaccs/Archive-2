@@ -59,11 +59,11 @@ nav > div.container {
 #logo {
     padding-left: 2em;
     flex: 1;
-    font-size: 20px;
 }
 
 #logo a {
     color: var(--secondary-font-color);
+    font-size: 24px;
 }
 
 #items {
@@ -163,9 +163,9 @@ nav a {
     z-index: 50;
     position: absolute;
     top: 0px;
-    right: 20px;
-    width: 270px;
-    height: 280px;
+    right: 100px;
+    width: 320px;
+    height: 290px;
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .1);
@@ -207,7 +207,6 @@ nav a {
 
 h2 {
     font-size: 2em;
-    font-weight: 100;
     color: var(--secondary-heading-color);
 }
 
@@ -227,14 +226,15 @@ h2 {
 /* Heading */
 h1 {
     color: #dd4206;
-    text-shadow: 1px 1px var(--secondary-border-color);
+    text-shadow: 1.25px 1.25px var(--secondary-border-color);
     font-size: 4.2em;
+    font-weight: 100;
     font-family: 'Passion One', cursive;
-    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
 h1, h2 {
-    padding-left: 36px;
+    padding-left: 70px;
 }
 /* End Heading */
 
@@ -258,7 +258,7 @@ main:after {
 
 .primary-wrapper {
     background-color: var(--secondary-background-color);
-    padding: 1em;
+    padding: 2em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -282,7 +282,7 @@ main:after {
     margin-bottom: 10px;
 }
 
- .container-etheral h4, .container-input label, .container-input p {
+ .container-etheral h4 {
     color: var(--secondary-font-color);
 }
 
@@ -325,15 +325,22 @@ div.card > *, a {
 }
 
 .cat-image {
-    transform: translate(0px, -70px);
+    transform: translate(0px, -63px);
 }
 
 .card-info {
-    height: 43%;
+    height: 45%;
     display: flex;
     flex-direction: column;
+    padding: .5em 1em 0em 1em;
+}
+
+.card-info div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 100%;
     justify-content: space-between;
-    padding: .5em 1em 1em 1em;
 }
 
 #birds, #cats {
@@ -349,6 +356,7 @@ div.card > *, a {
 
 .link-underline {
     text-decoration: underline;
+    color: inherit;
 }
 /* End Primary Content */
 
@@ -504,6 +512,7 @@ ul {
         margin-left: auto;
         width: 80%;
         margin-right: auto;
+        font-weight: 100;
     }
 
     #hero {
@@ -586,6 +595,10 @@ ul {
         margin-right: 0em;
     }
 
+    .primary-wrapper {
+        padding: 1em .25em 1em .25em;
+    }
+
     div.additional-content-wrapper {
         text-align: left;
         padding: 0em 1em;
@@ -618,6 +631,7 @@ ul {
 
     h2 {
         top: 20px;
+        font-weight: 100;
     }
 
     #hero {
@@ -643,10 +657,13 @@ ul {
 
     #logo {
         padding: 12px 20px;
-        font-size: 10px;
         text-align: center;
         display: flex;
         justify-content: center;
+    }
+
+    #logo a {
+        font-size: 10px;
     }
 
     .padd-right {
@@ -687,6 +704,10 @@ ul {
     div.card {
         margin-right: 0em;
         margin-bottom: 10px;
+    }
+
+    .primary-wrapper {
+        padding: 1em .25em 1em .25em;
     }
 
     .container-input {
