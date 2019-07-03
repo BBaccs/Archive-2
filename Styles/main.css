@@ -7,12 +7,14 @@
 
     --primary-border-color: #0f576e;
     --secondary-border-color: #c0bfbf;
+    --tertiary-border-color: #579bb1;
 
     --primary-heading-color: #dd4206;
     --secondary-heading-color: #167795;
 
     --primary-font-color: #579bb1;
     --secondary-font-color: #ffffff;
+    --tertiary-font-color: #c6dee5;
 }
 /* End Variables */
 
@@ -204,7 +206,8 @@ nav a {
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: 2em;
+    font-weight: 100;
     color: var(--secondary-heading-color);
 }
 
@@ -260,18 +263,13 @@ main:after {
     margin-right: auto;
 }
 
-div.container-etheramary-fol-content, 
-div.container-etheral-content > p > a,
-.container-etheral > * {
-    color: var(--secondary-font-color);
-}
-
 .container-etheral {
     display: flex;
     flex-direction: column;
     padding: 2em 1em 1em 1em;
     background-color:rgb(20,118,147,.8);
     border-radius: 10px;
+    color: var(--tertiary-font-color);
 }
 
 .container-etheral-content {
@@ -282,6 +280,10 @@ div.container-etheral-content > p > a,
 .container-etheral-content > h4,
 .container-etheral-content > p:first-of-type {
     margin-bottom: 10px;
+}
+
+ .container-etheral h4, .container-input label, .container-input p {
+    color: var(--secondary-font-color);
 }
 
 .container-cards {
@@ -359,6 +361,10 @@ div.card > *, a {
     color: var(--primary-font-color);
 }
 
+.additional-content-wrapper h5 {
+    color: var(--secondary-heading-color);
+}
+
 .additional-content-wrapper > p {
     margin: 0em auto 0em auto;
     line-height: 20px;
@@ -383,7 +389,7 @@ div.card > *, a {
 
 .container-list > div {
     padding-top: 1em;
-    border-top: 1px solid var(--primary-border-color);
+    border-top: 1px solid var(--tertiary-border-color);
 }
 
 .container-list .bullet-list {
@@ -428,7 +434,7 @@ div.card > *, a {
 footer {
     background-color: var(--primary-background-color);
     border: 2px solid var(--primary-border-color);
-    color: var(--secondary-font-color);
+    color: var(--tertiary-font-color);
     text-align: center;
     padding: .5em 0em .5em 0em;
 }
@@ -494,19 +500,27 @@ ul {
     }
 
     h2 {
-        font-size: 2em;
-        top: 50px;
+        top: 60px;
+        margin-left: auto;
+        width: 80%;
+        margin-right: auto;
     }
 
     #hero {
         width: 100%;
-        height: 340px;
+        height: 360px;
     }
 
     #hero #hero-image {
         right: 0px;
         width: 100%;
-        height: 220px;
+        height: 250px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+    }
+
+    #hero #hero-image img {
+        transform: scale3d(1, 2, 1);
     }
 
     p, li {
@@ -603,19 +617,24 @@ ul {
     }
 
     h2 {
-        font-size: 2em;
-        top: 10px;
+        top: 20px;
     }
 
     #hero {
         width: 100%;
-        height: 340px;
+        height: 360px;
     }
 
     #hero #hero-image {
         right: 0px;
         width: 100%;
-        height: 220px;
+        height: 250px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+    }
+
+    #hero #hero-image img {
+        transform: scale3d(1, 1.75, 1);
     }
 
     p, li {
