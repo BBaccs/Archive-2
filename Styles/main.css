@@ -257,6 +257,7 @@ main:after {
 }
 
 .primary-wrapper {
+    display: flex;
     background-color: var(--secondary-background-color);
     padding: 2em;
     margin-left: auto;
@@ -273,8 +274,7 @@ main:after {
 }
 
 .container-etheral-content {
-        margin: 0em 2em 0em 2em;
-        line-height: 20px;
+    line-height: 20px;
 }
 
 .container-etheral-content > h4,
@@ -288,7 +288,6 @@ main:after {
 
 .container-cards {
     display: flex;
-    justify-content: center;
 }
 
 .card {
@@ -351,7 +350,6 @@ div.card > *, a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 5em;
 }
 
 .link-underline {
@@ -468,34 +466,33 @@ ul {
 
 
 /* iPad breakpoint */
-@media screen and (min-width: 415px) and (max-width: 1023px) { 
+@media screen and (min-width: 415px) and (max-width: 1024px) { 
     h1, h2 {
         padding-left: 60px;
     }
-
+    .primary-wrapper {
+        padding: 2em 3em;
+    }
     .container-cards {
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 700px;
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-template-rows: repeat(2, 300px);
+        /*max-width: 536px;*/
         margin-top: 1em;
     }
-
-    .card:last-of-type {
-        margin-right: 1em;
+    .card {
+        width: 100%;
     }
-
-    .container-etheral-content {
-        margin: 0em 3.25em 0em 3.25em;
-    }
-    
-    .container-input {
-        margin-right: 4em;
+    .card-cat:last-child {
+        margin-right: initial;
     }
 }
 /* iPad breakpoint */
 
 /* Phone breakpoint */
-@media (max-width: 414px) and (min-width: 321px) {
+@media (max-width: 414px) {
     
     h1, h2 {
         padding: 0em;
@@ -503,21 +500,26 @@ ul {
     }
     
     h1 {
+        margin-top: 20px;
         font-size: 3.75em;
-        bottom: 55px;
     }
 
     h2 {
-        top: 60px;
-        margin-left: auto;
-        width: 80%;
-        margin-right: auto;
+        position: absolute;
+        bottom: 20px;
+        margin-top: 30px;
+        margin-left: 10%;
+        margin-right: 10%;
         font-weight: 100;
     }
+    #hero h2 {position: absolute;}
 
     #hero {
+        position: relative;
         width: 100%;
         height: 360px;
+        display: block;
+        border-top: 1px solid rgb(16, 87, 110);
     }
 
     #hero #hero-image {
@@ -529,7 +531,7 @@ ul {
     }
 
     #hero #hero-image img {
-        transform: scale3d(1, 2, 1);
+        transform: scale3d(2, 2, 2) translateY(60px);
     }
 
     p, li {
@@ -545,7 +547,7 @@ ul {
     
     #logo > a {
         padding: 12px 20px;
-        font-size: 12px;
+        font-size: 24px;
     }
 
     .padd-right {
@@ -556,11 +558,17 @@ ul {
         flex-direction: column;
         padding-top: .5em;
     }
+    nav > .container {
+        flex-direction: column;
+    }
 
     nav ul {
         justify-content: center;
     }
 
+    #items {
+        padding-right: initial;
+    }
     #items > ol > li {
         font-size: 10px;
     }
@@ -578,11 +586,8 @@ ul {
     }
 
     .card {
+        width: initial;
         margin-bottom: 10px;
-    }
-
-    .container-input {
-        margin: .25em 3em 0em .25em;
     }
 
     .container-list {
@@ -617,6 +622,7 @@ ul {
 
 
 /* XS Phone breakpoint */
+/*
 @media (max-width: 321px)  {
 
     h1, h2 {
@@ -706,9 +712,6 @@ ul {
         margin-bottom: 10px;
     }
 
-    .primary-wrapper {
-        padding: 1em .25em 1em .25em;
-    }
 
     .container-input {
         margin: .25em 3em 0em .25em;
@@ -734,5 +737,6 @@ ul {
         bottom: 10px
     }
 }
+*/
 /* END XS Phone breakpoint */
 /* END MEDIA QUERIES */
