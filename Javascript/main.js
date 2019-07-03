@@ -3,12 +3,10 @@ const birdsCheckbox = document.getElementById('birds');
 const catsCheckbox = document.getElementById('cats');
 const cardCat = document.querySelectorAll('.card-cat');
 const cardBird = document.querySelectorAll('.card-bird');
-const extendableLink = document.querySelector('.extendable-link');
-const cardContainer = document.querySelector('.card-container');
 
 // Define functions
 // Toggle hide cards
-function showSelectedCards(e) {
+function showSelectedCards(event) {
  
     // If both are checked, remove show all cards and uncheck both boxes
     if (birdsCheckbox.checked && catsCheckbox.checked) {
@@ -24,7 +22,7 @@ function showSelectedCards(e) {
         }
     }  
     // Check to see if the Birds checkbox is checked, if so, hide the cat cards
-    else if (e.target.id === 'birds') {
+    else if (event.target.id === 'birds') {
         // Loop through selected card and toggle the hideElement css class
          for (let i = 0; i < cardBird.length; i++) {
             cardCat[i].classList.toggle('is-hidden');   
@@ -36,34 +34,13 @@ function showSelectedCards(e) {
             cardBird[i].classList.toggle('is-hidden');   
         }
     }  
-
-    // If the screen is iPad size or smaller, reduce height of the now container, since it now contains less cards
-    // if(window.screen.availWidth < 769) {
-    //     // If the screen is phone size, we need the container slightly bigger
-    //     if (window.screen.availWidth < 400) {
-    //         cardContainer.classList.toggle('min-height650');
-    //     } else {
-    //         cardContainer.classList.toggle('min-height450');
-    //     }
-    // }
-}
-
-
-// Toggles a dropdown menu with links, takes the link containing the dropdown link as a parameter
-function dropDownMenu(linkName) {
-    linkName.classList.toggle('is-hidden');
-    // linkName.classList.toggle('darkBarkgroundColor');
 }
 
 // Create event listeners
 // Toggle hide cards
 birdsCheckbox.addEventListener('click', showSelectedCards);
-catsCheckbox.addEventListener('click', showSelectedCards);
 
-// Dropdown menu toggle
-// extendableLink.addEventListener('click', () => {
-//     dropDownMenu(linkOneDropDownMenu);
-// });
+catsCheckbox.addEventListener('click', showSelectedCards);
 
 document.querySelector('#items .is-clickable').addEventListener('click', (event) => {
     const dropdown = document.querySelector('#dropdown');
